@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <link rel="stylesheet" href="index.css" />
-        <title>ghc</title>
-    </head>
+{% extends '_base.twig' %}
+
+
+{% block title %}Menu{% endblock %}
+
     <body>
-        <nav>
-            <img src="svg/logo.svg" alt="generic hipster coffee black and white logo" style="height: 3rem; width: 3rem;" />
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/coffee">Coffee</a></li>
-                <li><a href="/our-story">Our Story</a></li>
-            </ul>
-        </nav>
+{% block content %}
         <main>
             <h1>Menu</h1>
             <h2>Espresso Coffee</h2>
@@ -123,15 +112,6 @@
             </ul>
             <img src="img/espresso-machine-detail.jpg" alt="close-up of coffee pouring from portafilter " style="height: auto; width: 1090px;" />
         </main>
-        <footer>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/coffee">Coffee</a></li>
-                <li><a href="/our-story">Our Story</a></li>
-            </ul>
-            <span>#Hipstersmakecoffee</span>
-            <p>Follow us on <a href="#">Twitter</a> and <a href="#">Instagram</a></p>
-        </footer>
+        {% endblock %}
     </body>
 </html>

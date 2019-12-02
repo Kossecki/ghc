@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <link rel="stylesheet" href="index.css" />
-        <title>ghc</title>
-    </head>
+{% extends '_base.twig' %}
+
+
+{% block title %}Coffee{% endblock %}
     <body>
-        <nav>
-            <img src="svg/logo.svg" alt="generic hipster coffee black and white logo" style="height: 3rem; width: 3rem;" />
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/coffee">Coffee</a></li>
-                <li><a href="/our-story">Our Story</a></li>
-            </ul>
-        </nav>
+{% block content %}
         <main>
             <h1>Coffee</h1>
             <p>
@@ -54,15 +42,6 @@
                 alongside sprinklings of cinnamon in the finish.
             </p>
         </main>
-        <footer>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/coffee">Coffee</a></li>
-                <li><a href="/our-story">Our Story</a></li>
-            </ul>
-            <p>#Hipstersmakecoffee</p>
-            <p>Follow us on <a href="#">Twitter</a> and <a href="#">Instagram</a></p>
-        </footer>
+        {% endblock %}
     </body>
 </html>
