@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
         <title>{% block title %}{% endblock %}</title>
     </head>
@@ -13,7 +14,7 @@
                     <a href="/">
                         <img
                         class="navbar-brand"
-                        src="svg/logo.svg"
+                        src="/svg/logo.svg"
                         alt="generic hipster coffee black and white logo"
                         style="width: 100px;"
                         />
@@ -30,8 +31,7 @@
             </div>
         </div>
         <main class="container">
-            {% block content %}
-            {% endblock %}
+            {% block content %}{% endblock %}
         </main>
         <footer class="bg-dark">
             <ul class="nav justify-content-center">
@@ -43,5 +43,6 @@
             <p class="text-center">#Hipstersmakecoffee</p>
             <p class="text-center">Follow us on <a href="#">Twitter</a> and <a href="#">Instagram</a></p>
         </footer>
+        {% block script %}{% endblock %}
     </body>
 </html>

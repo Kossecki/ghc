@@ -6,7 +6,7 @@
 {% block content %}
     <h1 class="text-uppercase">Generic Hipster Coffee</h1>
     <p class="h2 text-uppercase">Specialty coffee, fresh food &#38; local community.</p>
-    <img src="img/counter.jpg" alt="coffee shop counter" class="img-fluid" />
+    <img src="/img/counter.jpg" alt="coffee shop counter" class="img-fluid" />
     <div class="row">
         <div class="col-sm">
             <h2 class="text-uppercase">Opening hours</h2>
@@ -25,16 +25,19 @@
     <div class="embed-responsive embed-responsive-16by9">
         <div class="embed-responsive-item" id="map"></div>
     </div>
+{% endblock %}
+
+{% block script %}
     <script>
-        function initMap() {
-            var ivySt = { lat: 37.777298, lng: -122.423454 };
-            var map = new google.maps.Map(document.getElementById("map"), { zoom: 16, center: ivySt });
-            var marker = new google.maps.Marker({ position: ivySt, map: map });
-        }
+            function initMap() {
+                var ivySt = { lat: 37.777298, lng: -122.423454 };
+                var map = new google.maps.Map(document.getElementById("map"), { zoom: 16, center: ivySt });
+                var marker = new google.maps.Marker({ position: ivySt, map: map });
+            }
     </script>
     <script
-        async
-        defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd1MDV7YL_ruIZgSTk_buouK8KiPXVuVA&callback=initMap">
+            async
+            defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd1MDV7YL_ruIZgSTk_buouK8KiPXVuVA&callback=initMap">
     </script>
 {% endblock %}
