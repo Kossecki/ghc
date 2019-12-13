@@ -31,7 +31,14 @@
     <script>
             function initMap() {
                 var ivySt = { lat: 37.777298, lng: -122.423454 };
-                var map = new google.maps.Map(document.getElementById("map"), { zoom: 16, center: ivySt });
+                var map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 16,
+                    center: ivySt,
+                    mapTypeControl: false,
+                    scaleControl: false,
+                    streetViewControl: false,
+                    rotateControl: false,
+                    fullscreenControl: true });
                 var marker = new google.maps.Marker({ position: ivySt, map: map });
             }
     </script>
