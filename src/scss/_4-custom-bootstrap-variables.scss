@@ -168,20 +168,20 @@
     // variables. Mostly focused on spacing.
     // You can add more entries to the $spacers map, should you need more variation.
 
-    // $spacer: 1rem; $spacer: $spacer !global; // 1rem
+     $spacer: 1.5rem; $spacer: $spacer !global; // 1rem
     // uncomment whole block, the following variable uses map-merge(),
     // so you can define only new ones you need
-    /*
+
     // stylelint-disable-next-line scss/dollar-variable-default
     $spacers: (
     //        0: 0,
     //        1: ($spacer * .25),
-    //        2: ($spacer * .5),
+        2: ($spacer * .67),
     //        3: $spacer,
     //        4: ($spacer * 1.5),
     //        5: ($spacer * 3)
     ); $spacers: $spacers !global;
-     */
+
 
     // This variable affects the `.h-*` and `.w-*` classes.
     // uncomment whole block, the following variable uses map-merge(),
