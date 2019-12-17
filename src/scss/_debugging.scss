@@ -1,0 +1,14 @@
+main.container {
+    background-image: url("/img/screenshot-menu.png");
+    background-position-x: -50px;
+    background-position-y: -40px;
+    background-repeat: no-repeat;
+  }
+
+main.container > *{
+    mix-blend-mode: multiply;
+  }
+
+  main {
+      color: darkgoldenrod;
+  }
