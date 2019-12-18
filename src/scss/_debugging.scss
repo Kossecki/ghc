@@ -8,7 +8,7 @@
 /* main.container {
     background-image: url("/img/coffee.png");
     background-position-x: -48.1px;
-    background-position-y: -px;
+    background-position-y: -40px;
     background-repeat: no-repeat;
 }
  */
@@ -19,11 +19,23 @@
     background-repeat: no-repeat;
 }
  */
-main.container > * {
-    mix-blend-mode: multiply;
-}
 
+/* main.container > * {
+    mix-blend-mode: multiply;
+} */
 /* main {
     color: darkgoldenrod;
+}
+ */
+
+/* footer {
+    background-image: url("/img/footer.png");
+    background-position-x: 380px;
+    background-position-y: 9px;
+    background-repeat: no-repeat;
+}
+
+footer > * {
+    mix-blend-mode: multiply;
 }
  */
