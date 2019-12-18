@@ -1,14 +1,29 @@
-main.container {
+/* main.container {
     background-image: url("/img/screenshot-menu.png");
     background-position-x: -50px;
     background-position-y: -40px;
     background-repeat: no-repeat;
-  }
-
-main.container > *{
+}
+ */
+/* main.container {
+    background-image: url("/img/coffee.png");
+    background-position-x: -48.1px;
+    background-position-y: -px;
+    background-repeat: no-repeat;
+}
+ */
+/* main.container {
+    background-image: url("/img/screenshot-menu.png");
+    background-position-x: -50px;
+    background-position-y: -40px;
+    background-repeat: no-repeat;
+}
+ */
+main.container > * {
     mix-blend-mode: multiply;
-  }
+}
 
-main {
-      color: darkgoldenrod;
-  }
+/* main {
+    color: darkgoldenrod;
+}
+ */

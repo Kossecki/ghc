@@ -220,7 +220,7 @@
     //
     // Style p element.
 
-    // $paragraph-margin-bottom: 1rem; $paragraph-margin-bottom: $paragraph-margin-bottom !global; // 1rem
+     $paragraph-margin-bottom: 0.7rem; $paragraph-margin-bottom: $paragraph-margin-bottom !global; // 1rem
 
 
     // Grid breakpoints
@@ -359,7 +359,7 @@
     // $lead-font-size: $font-size-base * 1.25; $lead-font-size: $lead-font-size !global; // $font-size-base * 1.25
     // $lead-font-weight: 300; $lead-font-weight: $lead-font-weight !global; // 300
 
-    // $small-font-size: 80%; $small-font-size: $small-font-size !global; // 80%
+     $small-font-size: 106%; $small-font-size: $small-font-size !global; // 80%
 
      $text-muted: #ced4da; $text-muted: $text-muted !global; // $gray-600
 
