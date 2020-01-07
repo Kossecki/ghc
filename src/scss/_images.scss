@@ -1,0 +1,9 @@
+.ghc-navbar-brand {
+    width: 100px;
+}
+
+@media (min-width: 768px){
+    .ghc-navbar-brand {
+        width: 150px;
+    }
+}
