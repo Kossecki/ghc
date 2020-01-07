@@ -275,7 +275,7 @@
      $border-width: 1px; $border-width: $border-width !global; // 1px
     // $border-color: $gray-300; $border-color: $border-color !global; // $gray-300
 
-    // $border-radius: .25rem; $border-radius: $border-radius !global; // .25rem
+     $border-radius: 0; $border-radius: $border-radius !global; // .25rem
     // $border-radius-lg: .3rem; $border-radius-lg: $border-radius-lg !global; // .3rem
     // $border-radius-sm: .2rem; $border-radius-sm: $border-radius-sm !global; // .2rem
 
@@ -866,10 +866,10 @@
     // $card-border-radius: $border-radius; $card-border-radius: $card-border-radius !global; // $border-radius
     // $card-border-color: rgba($black, .125); $card-border-color: $card-border-color !global; // rgba($black, .125)
     // $card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}); $card-inner-border-radius: $card-inner-border-radius !global; // calc(#{$card-border-radius} - #{$card-border-width})
-     $card-cap-bg: transparent; $card-cap-bg: $card-cap-bg !global; // rgba($black, .03)
+    // $card-cap-bg: rgba($black, .03); $card-cap-bg: $card-cap-bg !global; // rgba($black, .03)
     // $card-cap-color: null; $card-cap-color: $card-cap-color !global; // null
     // $card-color: null; $card-color: $card-color !global; // null
-     $card-bg: hsl(0, 0%, 95%); $card-bg: $card-bg !global; // $white
+    // $card-bg: $white; $card-bg: $card-bg !global; // $white
 
     // $card-img-overlay-padding: 1.25rem; $card-img-overlay-padding: $card-img-overlay-padding !global; // 1.25rem
 
