@@ -272,7 +272,7 @@
     // $line-height-lg: 1.5; $line-height-lg: $line-height-lg !global; // 1.5
     // $line-height-sm: 1.5; $line-height-sm: $line-height-sm !global; // 1.5
 
-     $border-width: 1px; $border-width: $border-width !global; // 1px
+    // $border-width: 1px; $border-width: $border-width !global; // 1px
     // $border-color: $gray-300; $border-color: $border-color !global; // $gray-300
 
      $border-radius: 0; $border-radius: $border-radius !global; // .25rem
@@ -861,8 +861,8 @@
     // Cards
 
     // $card-spacer-y: .75rem; $card-spacer-y: $card-spacer-y !global; // .75rem
-     $card-spacer-x: 0px; $card-spacer-x: $card-spacer-x !global; // 1.25rem
-     $card-border-width: 0px; $card-border-width: $card-border-width !global; // $border-width
+     $card-spacer-x: 0; $card-spacer-x: $card-spacer-x !global; // 1.25rem
+     $card-border-width: 0; $card-border-width: $card-border-width !global; // $border-width
     // $card-border-radius: $border-radius; $card-border-radius: $card-border-radius !global; // $border-radius
     // $card-border-color: rgba($black, .125); $card-border-color: $card-border-color !global; // rgba($black, .125)
     // $card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}); $card-inner-border-radius: $card-inner-border-radius !global; // calc(#{$card-border-radius} - #{$card-border-width})
