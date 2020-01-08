@@ -5,6 +5,11 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .ghc-nav-link:hover {
-    color: hsl(0, 0, 100%);
+    color: $white;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    color: $white;
     text-decoration: none;
 }
