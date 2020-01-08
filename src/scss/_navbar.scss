@@ -2,7 +2,7 @@
     width: 100px;
 }
 
-@media (min-width: 768px){
+@include media-breakpoint-up(md){
     .ghc-navbar-brand {
         width: 150px;
     }
