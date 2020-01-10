@@ -1,28 +1,29 @@
 {% extends '_base.twig' %}
 
-
 {% block title %}Generic Hipster Coffee{% endblock %}
+
+{% block link_home %}active{% endblock %}
 
 {% block content %}
     <h1>Generic Hipster Coffee</h1>
     <p class="h2">Specialty coffee, fresh food &#38; local community.</p>
-    <img src="/img/counter.jpg" alt="coffee shop counter" class="img-fluid" />
+    <img src="/img/counter.jpg" alt="coffee shop counter" class="img-fluid mb-3" />
     <div class="row">
         <div class="col-sm">
-            <h2>Opening hours</h2>
-            <p>Sunday to Thursday: 8am – 11pm</p>
-            <p>Friday to Saturday: 8am – 1am</p>
+            <h2 class="h4 mb-3">Opening hours</h2>
+            <p>Sunday to Thursday: 8am – 11pm<br>
+            Friday to Saturday: 8am – 1am</p>
         </div>
         <div class="col-sm">
-            <h2>Book a table</h2>
+            <h2 class="h4 mb-3">Book a table</h2>
             <p><a href="tel:+14153214567">Call +1 415-321-4567</a></p>
         </div>
         <div class="col-sm">
-            <h2>Address</h2>
-            <p>321 Ivy St.<br />San Francisco, CA 94102</p>
+            <h2 class="h4 mb-3">Address</h2>
+            <p>321 Ivy St.<br>San Francisco, CA 94102</p>
         </div>
     </div>
-    <div class="embed-responsive embed-responsive-16by9">
+    <div class="embed-responsive embed-responsive-16by9 mb-n4">
         <div class="embed-responsive-item" id="map"></div>
     </div>
 {% endblock %}
