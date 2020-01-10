@@ -10,19 +10,19 @@
     <body>
         <div class="bg-light">
             <div class="container">
-                <nav class="navbar navbar-expand navbar-light sticky-top flex-column flex-md-row">
+                <nav class="navbar navbar-expand navbar-light sticky-top flex-column flex-md-row mx-md-n3">
                     <a href="/">
                         <img
-                        class="navbar-brand ghc-navbar-brand ml-md-n3"
+                        class="navbar-brand ghc-navbar-brand"
                         src="/svg/logo.svg"
                         alt="generic hipster coffee black and white logo"
                         />
                     </a>
                     <ul class="navbar-nav justify-content-between ml-md-auto">
-                        <li class="nav-item p-sm-1 ml-sm-2 {% block link_home %}{% endblock %}"><a href="/" class="nav-link text-decoration-none">Home</a></li>
-                        <li class="nav-item p-sm-1 ml-sm-2 {% block link_menu %}{% endblock %}"><a href="/menu" class="nav-link text-decoration-none">Menu</a></li>
-                        <li class="nav-item p-sm-1 ml-sm-2 {% block link_coffee %}{% endblock %}"><a href="/coffee" class="nav-link text-decoration-none">Coffee</a></li>
-                        <li class="nav-item p-sm-1 ml-sm-2 {% block link_our_story %}{% endblock %}">
+                        <li class="nav-item mx-md-2 {% block link_home %}{% endblock %}"><a href="/" class="nav-link text-decoration-none">Home</a></li>
+                        <li class="nav-item mx-md-2 {% block link_menu %}{% endblock %}"><a href="/menu" class="nav-link text-decoration-none">Menu</a></li>
+                        <li class="nav-item mx-md-2 {% block link_coffee %}{% endblock %}"><a href="/coffee" class="nav-link text-decoration-none">Coffee</a></li>
+                        <li class="nav-item ml-md-2 {% block link_our_story %}{% endblock %}">
                             <a href="/our-story" class="nav-link text-decoration-none">Our Story</a>
                         </li>
                     </ul>
@@ -32,12 +32,12 @@
         <main class="container mt-4">
             {% block content %}{% endblock %}
         </main>
-        <footer class="bg-dark text-center pt-4 pb-5">
-            <ul class="nav justify-content-center mt-3">
-                <li class="nav-item mx-sm-1 px-sm-1 px-md-2"><a href="/" class="nav-link ghc-nav-link {% block link_home %}{% endblock %}">Home</a></li>
-                <li class="nav-item mx-sm-1 px-sm-1 px-md-2"><a href="/menu" class="nav-link ghc-nav-link {% block link_menu %}{% endblock %}">Menu</a></li>
-                <li class="nav-item mx-sm-1 px-sm-1 px-md-2"><a href="/coffee" class="nav-link ghc-nav-link {% block link_coffee %}{% endblock %}">Coffee</a></li>
-                <li class="nav-item mx-sm-1 px-sm-1 px-md-2"><a href="/our-story" class="nav-link ghc-nav-link {% block link_our_story %}{% endblock %}">Our Story</a></li>
+        <footer class="container bg-dark text-center pt-4 pb-5">
+            <ul class="nav justify-content-between justify-content-sm-center mt-3">
+                <li class="nav-item"><a href="/" class="nav-link ghc-nav-link {% block link_home %}{% endblock %}">Home</a></li>
+                <li class="nav-item"><a href="/menu" class="nav-link ghc-nav-link {% block link_menu %}{% endblock %}">Menu</a></li>
+                <li class="nav-item"><a href="/coffee" class="nav-link ghc-nav-link {% block link_coffee %}{% endblock %}">Coffee</a></li>
+                <li class="nav-item"><a href="/our-story" class="nav-link ghc-nav-link {% block link_our_story %}{% endblock %}">Our Story</a></li>
             </ul>
             <p class="h5 font-weight-bold line-height-a ghc-letter-spacing text-muted mt-5">#Hipstersmakecoffee</p>
             <p>Follow us on <a href="https://twitter.com/ghcoffeesf">Twitter</a> and <a href="https://www.instagram.com/ghcoffeesf/">Instagram</a></p>
