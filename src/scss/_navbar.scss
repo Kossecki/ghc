@@ -5,6 +5,6 @@
 @include media-breakpoint-up(md){
     .ghc-navbar-brand {
         width: 150px;
-        margin-left: -1.5rem;
+//        margin-left: -1 * map_get($spacers, 3); a more verbose way to achieve the desired margin
     }
 }
