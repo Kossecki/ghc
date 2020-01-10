@@ -13,59 +13,24 @@
     </p>
     <p>You can currently buy these beans in 350g bags.</p>
     <div class="row row-cols-md-2">
-        <div class="col-md-6 mb-3">
-            <div class="card h-100 bg-light">
-                <div class="card-body">
-                    <h2 class="h3 card-header border-bottom px-3">Quejina <br class="d-xl-none">(Guatemala)</h2>
-                    <img src="/img/smcr-quejina.jpg" alt="sealed bag of Quejina coffee" class="card-img-top" />
-                    <div class="card-text mt-2 px-3 pb-3">
-                        <p class="font-italic">redcurrant / honeysuckle / juicy</p>
-                        <p>Fruity redcurrant and sweet honeysuckle flavours. An incredibly juicy coffee which we struggled to
-                        decide on the right berry descripton, but raspberry, blackberry and blueberry were also in the running!</p>
+        {% for coffee in coffees %}
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 bg-light">
+                    <div class="card-body">
+                        <h2 class="h3 card-header border-bottom px-3">
+                            {{ coffee.name }} <br class="d-xl-none">({{ coffee.origin }})
+                        </h2>
+                        <img src="{{ coffee.image }}" alt="sealed bag of {{ coffee.name }} coffee" class="card-img-top"/>
+                        <div class="card-text mt-2 px-3 pb-3">
+                            <p class="font-italic">
+                                {{ coffee.tastes|join(' / ')|lower }}
+                            </p>
+                            <p>{{ coffee.tastingNotes }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6 mb-3">
-            <div class="card h-100 bg-light">
-                <div class="card-body">
-                    <h2 class="h3 card-header border-bottom px-3">Kamwangi <br class="d-xl-none">(Kenya)</h2>
-                    <img src="/img/smcr-kamwangi.jpg" alt="sealed bag of Kamwangi coffee" class="card-img-top" />
-                    <div class="card-text mt-2 px-3 pb-3">
-                        <p class="font-italic">blackberry / orange / silky</p>
-                        <p>This is one fruit filled espresso! From citrus fruits, such as orange, grapefruit and clementine, to
-                        berries of the black, blue and red variety, this is fruit turned up to 11, all wrapped up in a silky
-                        smooth body.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-3">
-            <div class="card h-100 bg-light">
-                <div class="card-body">
-                    <h2 class="h3 card-header border-bottom px-3">Quejina <br class="d-xl-none">(Guatemala)</h2>
-                    <img src="/img/smcr-quejina.jpg" alt="sealed bag of Quejina coffee" class="card-img-top" />
-                    <div class="card-text mt-2 px-3 pb-3">
-                        <p class="font-italic">redcurrant / honeysuckle / juicy</span>
-                        <p>Fruity redcurrant and sweet honeysuckle flavours. An incredibly juicy coffee which we struggled to
-                        decide on the right berry descripton, but raspberry, blackberry and blueberry were also in the running!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-3">
-            <div class="card h-100 bg-light">
-                <div class="card-body">
-                    <h2 class="h3 card-header border-bottom px-3">Decaf Espresso <br class="d-xl-none">(El Salvador)</h2>
-                    <img src="/img/smcr-decaf-espresso.jpg" alt="sealed bag of Decaf Espresso" class="card-img-top" />
-                    <div class="card-text mt-2 px-3 pb-3">
-                        <p class="font-italic">caramel / apple / cinnamon</p>
-                        <p>This is a single origin espresso from San Carlos in El Salvador, think sweet caramel and apple notes
-                        alongside sprinklings of cinnamon in the finish.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 {% endblock %}
 
