@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="{% block page_description %}{% endblock %}">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
         <title>{% block title %}{% endblock %}</title>
@@ -10,15 +11,16 @@
     <body>
         <div class="bg-light">
             <div class="container">
-                <nav class="navbar navbar-expand navbar-light sticky-top flex-column flex-md-row mx-md-n3">
+                <nav class="navbar navbar-expand navbar-light sticky-top flex-column flex-md-row mx-md-n3 d-print-flex">
                     <a href="/">
                         <img
-                        class="navbar-brand ghc-navbar-brand"
+                        class="navbar-brand ghc-navbar-brand d-print-block"
                         src="/svg/logo.svg"
                         alt="generic hipster coffee black and white logo"
                         />
                     </a>
-                    <ul class="navbar-nav justify-content-between ml-md-auto">
+                    <p class="d-none ml-md-auto d-print-block">Generic Hipster Coffee, 321 Ivy St., San Francisco, CA 94102, phone: +1 415-321-4567</p>
+                    <ul class="navbar-nav justify-content-between ml-md-auto d-print-none">
                         <li class="nav-item mx-md-2 {% block link_home %}{% endblock %}"><a href="/" class="nav-link text-decoration-none">Home</a></li>
                         <li class="nav-item mx-md-2 {% block link_menu %}{% endblock %}"><a href="/menu" class="nav-link text-decoration-none">Menu</a></li>
                         <li class="nav-item mx-md-2 {% block link_coffee %}{% endblock %}"><a href="/coffee" class="nav-link text-decoration-none">Coffee</a></li>
@@ -32,15 +34,17 @@
         <main class="container mt-4">
             {% block content %}{% endblock %}
         </main>
-        <footer class="container bg-dark text-center pt-4 pb-5">
-            <ul class="nav justify-content-between justify-content-sm-center mt-3 mx-n2">
-                <li class="nav-item mx-sm-1"><a href="/" class="nav-link ghc-nav-link {% block link_home %}{% endblock %}">Home</a></li>
-                <li class="nav-item mx-sm-1"><a href="/menu" class="nav-link ghc-nav-link {% block link_menu %}{% endblock %}">Menu</a></li>
-                <li class="nav-item mx-sm-1"><a href="/coffee" class="nav-link ghc-nav-link {% block link_coffee %}{% endblock %}">Coffee</a></li>
-                <li class="nav-item mx-sm-1"><a href="/our-story" class="nav-link ghc-nav-link {% block link_our_story %}{% endblock %}">Our Story</a></li>
-            </ul>
-            <p class="h5 font-weight-bold line-height-a ghc-letter-spacing text-muted mt-5">#Hipstersmakecoffee</p>
-            <p>Follow us on <a href="https://twitter.com/ghcoffeesf">Twitter</a> and <a href="https://www.instagram.com/ghcoffeesf/">Instagram</a></p>
+        <footer class="bg-dark text-center pt-4 pb-5 d-print-none">
+            <div class="container">
+                <ul class="nav justify-content-center mt-3 mx-n2">
+                    <li class="nav-item mx-sm-2"><a href="/" class="nav-link ghc-nav-link {% block link_home %}{% endblock %}">Home</a></li>
+                    <li class="nav-item mx-sm-2"><a href="/menu" class="nav-link ghc-nav-link {% block link_menu %}{% endblock %}">Menu</a></li>
+                    <li class="nav-item mx-sm-2"><a href="/coffee" class="nav-link ghc-nav-link {% block link_coffee %}{% endblock %}">Coffee</a></li>
+                    <li class="nav-item mx-sm-2"><a href="/our-story" class="nav-link ghc-nav-link {% block link_our_story %}{% endblock %}">Our Story</a></li>
+                </ul>
+                <p class="h5 font-weight-bold line-height-a ghc-letter-spacing text-muted mt-5">#Hipstersmakecoffee</p>
+                <p class="text-muted">Follow us on <a href="https://twitter.com/ghcoffeesf">Twitter</a> and <a href="https://www.instagram.com/ghcoffeesf/">Instagram</a></p>
+            </div>
         </footer>
         {% block script %}{% endblock %}
     </body>

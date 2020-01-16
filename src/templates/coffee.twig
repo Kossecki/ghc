@@ -1,5 +1,7 @@
 {% extends '_base.twig' %}
 
+{% block page_description %}Current offer of coffee beans for spring 2020.{% endblock %}
+
 {% block title %}Coffee{% endblock %}
 
 {% block link_coffee %}active{% endblock %}
@@ -20,7 +22,7 @@
                         <h2 class="h3 card-header border-bottom px-3">
                             {{ coffee.name }} <br class="d-xl-none">({{ coffee.origin }})
                         </h2>
-                        <img src="{{ coffee.image }}" alt="sealed bag of {{ coffee.name }} coffee" class="card-img-top"/>
+                        <img src="{{ coffee.image }}" alt="sealed bag of {{ coffee.name }} coffee" class="card-img-top d-print-none"/>
                         <div class="card-text mt-2 px-3 pb-3">
                             <p class="font-italic">
                                 {{ coffee.tastes|join(' / ')|lower }}

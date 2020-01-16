@@ -1,5 +1,7 @@
 {% extends '_base.twig' %}
 
+{% block page_description %}Local cafe with great atmosphere and top-notch coffee, 321 San Francisco, CA 94102, open Sunday to Thursday from 8am to 11pm, Friday to Saturday 8am to 1am.{% endblock %}
+
 {% block title %}Generic Hipster Coffee{% endblock %}
 
 {% block link_home %}active{% endblock %}
@@ -7,19 +9,30 @@
 {% block content %}
     <h1>Generic Hipster Coffee</h1>
     <p class="h2">Specialty coffee, fresh food &#38; local community.</p>
-    <img src="/img/counter.jpg" alt="coffee shop counter" class="img-fluid mb-3" />
+<!--<picture>
+        <source srcset="http://satyr.io/1600x16:9" media="(min-width: 1024px)">
+        <source srcset="http://satyr.io/1024x16:9" media="(min-width: 768px)">
+        <source srcset="http://satyr.io/600x16:9" media="(min-width: 498px)">
+        <img srcset="http://satyr.io/500x16:9" alt="" class="img-fluid mb-3 d-print-none">
+    </picture> -->
+    <picture>
+        <source srcset="/img/counter-large.jpg" media="(min-width: 1024px)">
+        <source srcset="/img/counter-medium.jpg" media="(min-width: 768px)">
+        <source srcset="/img/counter-smallplus.jpg" media="(min-width: 498px)">
+        <img src="/img/counter-compressed.jpg" alt="coffee shop counter" class="img-fluid mb-3 d-print-none" />
+    </picture>
     <div class="row">
-        <div class="col-sm">
-            <h2 class="h4 mb-3">Opening hours</h2>
-            <p>Sunday to Thursday: 8am – 11pm<br>
-            Friday to Saturday: 8am – 1am</p>
+        <div class="col-sm mb-3">
+            <h2 class="h4">Opening hours</h2>
+            <p>Sunday to Thursday:<br class="d-none d-md-inline d-lg-none"> 8am – 11pm</p>
+            <p>Friday to Saturday:<br class="d-none d-md-inline d-lg-none"> 8am – 1am</p>
         </div>
-        <div class="col-sm">
-            <h2 class="h4 mb-3">Book a table</h2>
+        <div class="col-sm mb-3">
+            <h2 class="h4">Book a table</h2>
             <p><a href="tel:+14153214567">Call +1 415-321-4567</a></p>
         </div>
-        <div class="col-sm">
-            <h2 class="h4 mb-3">Address</h2>
+        <div class="col-sm mb-3">
+            <h2 class="h4">Address</h2>
             <p>321 Ivy St.<br>San Francisco, CA 94102</p>
         </div>
     </div>
