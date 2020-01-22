@@ -17,8 +17,14 @@
       "tastingNotes": "A returning gem from the Cauca region with flavours of toffee and apple pie, leading into raisins and cocoa notes for a sweet, moreish cup!",
       "description": "A third-time showcase with each year tasting better, welcome back La Piramide! Grown on the slopes of the Andes in the southwestern corner of Colombia, La Piramide captures that classic flavour profile of stonefruit and nut & raisin chocolate combined with an apple-sauce like acidity and sweetness. Not only in coffee but agriculture in general, it has become common practice for farmers to opt for higher-yielding cultivars with diminished flavour profiles. With a membership of 450 small-growers from across the Department of Cauca, the producers choose to protect their heritage and grow traditional varieties such as Bourbon, Caturra and Typica. Taking much longer to ripen at these altitudes, cherries build more flavour and display characteristics of crisp acidity and slight citric notes balanced out by the sugary sweetness and elegant texture. Best brewed as a pour-over highlighting its structure and full flavour, La Piramide makes for the perfect start to the day.",
       "images": [
-        "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_4bc1a7d0-22e3-4d22-aa5f-f671ea1aa44b_large.jpg",
-        "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_4bc1a7d0-22e3-4d22-aa5f-f671ea1aa44b_large@2x.jpg"
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_4bc1a7d0-22e3-4d22-aa5f-f671ea1aa44b_large.jpg",
+          "width": 480
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_4bc1a7d0-22e3-4d22-aa5f-f671ea1aa44b_large@2x.jpg",
+          "width": 1280
+        }
       ],
       "featured": "false"
     },
@@ -38,8 +44,14 @@
       "tastingNotes": "We're excited to welcome back the Los Girasoles from the Tarrazu region of Costa Rica. All red plums up front with a lingering caramel sweetness and shortbread notes, it's silky, light and delicious!",
       "description": "A firm favourite in our annual lineup, Los Girasoles is the third and final coffee we've selected from the Calderon family this year. After many years of working together, Fernanda, the youngest Calderon daughter, spent time with us while working in roasteries and cafes in and around Europe a few summers ago. On her return to Costa Rica, she set up a small roastery in the corner of their warehouse, roasting and distributing her coffee to local cafés. It is to our delight we received news that Fernanda opened up a coffee shop on the farm! Set on a terrace allowing you to take in the sweeping views of the valley and surrounding coffee farms, the coffee shop serves as a farm-to-cup experience for visiting guests. To see the Los Girasoles farm-to-farm circle complete is truly special. We might not be able to offer the view, but we sure are proud to share Los Girasoles with you. As the name suggests, expect sunshine in a cup.",
       "images": [
-        "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_b3739d93-0ffd-4889-9390-aad92afa28b6_large.jpg",
-        "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_b3739d93-0ffd-4889-9390-aad92afa28b6_large@2x.jpg"
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_b3739d93-0ffd-4889-9390-aad92afa28b6_large.jpg",
+          "width": 480
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_b3739d93-0ffd-4889-9390-aad92afa28b6_large@2x.jpg",
+          "width": 1280
+        }
       ],
       "featured": "false"
     },
@@ -59,8 +71,14 @@
       "description": "A huge hit last year, we've eagerly been awaiting the return of Huye Mountain. A pure feast of fruits, we were instantly convinced by the red and pink berry notes plus sugary sweetness so brilliantly complemented by the creaminess of this natural lot. Huye Mountain is a private washing station owned by David Rubanzangabo, who grew up in the area. Established in 2011 to improve access to quality processing for local smallholders, Huye Mountain now has 1330 farmers feeding into it. Evident within the community and cup quality coming from the region, David's impact has been remarkable. Roasted as a filter, this cup bares enough punch to be enjoyed as an after-dinner coffee and will do a stellar job as a middle of the day pick-me-up. Well rounded and brave, experiment with brewing it as an espresso and see it transform into a strawberry milkshake when mixed with milk.",
       "price": "16.00",
       "images": [
-        "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_5daf90bd-575e-4ed2-884a-483a4f32ee6c_large.jpg",
-        "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_5daf90bd-575e-4ed2-884a-483a4f32ee6c_large@2x.jpg"
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_5daf90bd-575e-4ed2-884a-483a4f32ee6c_large.jpg",
+          "width": 480
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_5daf90bd-575e-4ed2-884a-483a4f32ee6c_large@2x.jpg",
+          "width": 1280
+        }
       ],
       "featured": "false"
     },
@@ -80,8 +98,14 @@
       "description": "Over the years, we've presented Las Brisas in various shapes and forms across espresso and filter. Made up of a blend of roughly 50 Colombian producers surrounding Rioblanco, Tolima, we're showcasing this year's Las Brisas lot as the perfect weekend filter. Named after the breeze that gently blows through the mountains surrounding Rioblanco, this lot moves through you like a breath of calm. Versatile, with a wide range of flavours, we find a double pour-over brew allows the nutty, nougat textures to bloom while highlighting the clean, pleasant grape acidity and sweet honey finish. In October 2019, after many years of showcasing this coffee, we finally had the opportunity to visit the area and spend time with contributing producers Fabio and Fernando. A truly inspiring experience, their innovation is astounding and we're even more committed to continuing our work with them, but first, let's take a moment to savour, share and celebrate the comfort Las Brisas brings.",
       "price": "13.50",
       "images": [
-        "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_3a489603-47ff-4b5d-9f8c-9549a57d8cc7_large.jpg",
-        "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_3a489603-47ff-4b5d-9f8c-9549a57d8cc7_large@2x.jpg"
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_3a489603-47ff-4b5d-9f8c-9549a57d8cc7_large.jpg",
+          "width": 480
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0017/1562/products/Coffee-SQUARE_3a489603-47ff-4b5d-9f8c-9549a57d8cc7_large@2x.jpg",
+          "width": 1280
+        }
       ],
       "featured": "false"
     }
