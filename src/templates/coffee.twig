@@ -22,7 +22,19 @@
                         <h2 class="h3 card-header border-bottom px-3">
                             {{ coffee.name }} <br class="d-xl-none">({{ coffee.origin }})
                         </h2>
-                        <img src="{{ coffee.image }}" alt="sealed bag of {{ coffee.name }} coffee" class="card-img-top d-print-none"/>
+                        <img src="{{coffee.images[0].url}}"
+                        srcset="
+                        {% for image in coffee.images %}
+                            {{ image.url }} {{ image.width }}w
+                        {% endfor %}
+                        "
+                        sizes="
+                        (min-width: 1200px) 520px,
+                        (min-width: 992px) 430px,
+                        (min-width: 768px) 310px,
+                        (min-width: 576px) 490px,
+                        calc(100vw - 2 * 25px)"
+                        alt="sealed bag of {{ coffee.name }} coffee" class="card-img-top d-print-none"/>
                         <div class="card-text mt-2 px-3 pb-3">
                             <p class="font-italic">
                                 {{ coffee.tastes|join(' / ')|lower }}
