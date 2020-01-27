@@ -56,5 +56,25 @@
             </div>
         </footer>
         {% block script %}{% endblock %}
+        <script type="application/ld+json">
+            {
+            "@context": "http://schema.org",
+            "@type": "Restaurant",
+            "name": "Generic Hipster Coffee",
+            "description": "Specialty coffee, fresh food &#38; local community.",
+            "url": "ku-ghc.surge.sh",
+            "location": {
+                "name": "Generic Hipster Coffee",
+                "@type": "Place",
+                "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "San Francisco",
+                "streetAddress": "321 Ivy St.",
+                "postalCode": "CA 94102"
+                }
+            "telephone": "+1 415-321-4567",
+            "openingHours": ["Su-Th 08:00-23:00", "Fr-Sa 08:00-01:00"]
+            }
+        </script>
     </body>
 </html>
