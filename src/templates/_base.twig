@@ -18,6 +18,7 @@
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
+        {% block body%}
         <div class="bg-light">
             <div class="container">
                 <nav class="navbar navbar-expand navbar-light sticky-top flex-column flex-md-row mx-md-n3 d-print-flex">
@@ -56,6 +57,7 @@
             </div>
         </footer>
         {% block script %}{% endblock %}
+<<<<<<< HEAD
         <script type="application/ld+json">
             {
                 "@context": "http://schema.org",
@@ -85,5 +87,8 @@
                 }
             }
         </script>
+=======
+        {% endblock %}
+>>>>>>> master
     </body>
 </html>
