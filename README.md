@@ -12,7 +12,7 @@ Uses:
 - **Flexbugs fixes**: automatically fixes some of the [flexbugs](https://github.com/philipwalton/flexbugs) 
 - **CSSO**: CSS minifier with structural optimizations
 - **Twig.js**: JavaScript implementation of the Twig PHP templating language
-- **Surge.sh**: deploy static websites easily and for free
+- **Surge.sh**: deployment for static websites 
 
 
 ## First time installation
@@ -90,11 +90,9 @@ Upload everything in `/dist/` folder to the server.
 
 #### Surge.sh
 
-You can use [surge.sh](https://surge.sh) free service for that.
-
 1. Install surge client `npm install --global surge`.
 1. Run `surge` manually once in `/dist`: you will create an account with surge.sh.
-1. Set your own domain in `gulpfile.js` (it is `https://ku-ghc.surge.sh`).
+1. The domain name is `https://ku-ghc.surge.sh`(see gulpfile.js).
 1. To publish a new version run `npm run deploy`.
 
 If you would like to deploy to the same domain, run `surge --add katarina.uzakova@protonmail.com`.
