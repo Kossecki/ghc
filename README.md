@@ -2,17 +2,17 @@
 
 Uses:
 
-- **Bootstrap 4.3.1**: build responsive, mobile-first projects on the web with the world's most popular front-end component library, version https://getbootstrap.com/docs/4.3/getting-started/introduction/
-- **Gulp 4**: task runner for running all of the following
-- **Sass compilation**: leverage the power of the most popular CSS extension language
-- **Sourcemaps** generation for easier Sass debugging
+- **[Bootstrap 4.3.1](https://getbootstrap.com/docs/4.3/getting-started/introduction/)**
+- **Gulp 4**: task runner for running all of the following:
+- **Sass compilation**
+- **Sourcemaps** generation for Sass
 - **Browsersync**: automatically reloads (or injects in case of CSS), browsers' when you change files 
-- **Autoprefixer**: parses CSS and adds vendor prefixes according to [caniuse.com]()
+- **Autoprefixer**: parses CSS and adds vendor prefixes according to [caniuse.com](https://caniuse.com) and supported browsers (see browserslist in package.json)
 - **UnCSS**: removes unused styles from CSS
 - **Flexbugs fixes**: automatically fixes some of the [flexbugs](https://github.com/philipwalton/flexbugs) 
-- **CSSO**: CSS minifier with structural optimizations
+- **CSSO**: to minify CSS
 - **Twig.js**: JavaScript implementation of the Twig PHP templating language
-- **Surge.sh**: deployment for static websites 
+- **Surge.sh**: for deployment
 
 
 ## First time installation
@@ -74,7 +74,7 @@ If you need some data to be available in all templates, use `templates/data.json
 Folders and files from `/src/static/` are simply copied directly to `/dist/` folder.
 
 
-### Bootstrap 4.3.1 https://getbootstrap.com/docs/4.3/getting-started/introduction/
+### Bootstrap 4.3.1
 
 Currently unused Bootstrap components are commented out in `/src/index.scss`. Custom CSS components in the format _component-name.scss are added to the src/scss folder and 
 inserted into index.scss after the component group they modify.
@@ -95,5 +95,5 @@ Upload everything in `/dist/` folder to the server.
 1. The domain name is `https://ku-ghc.surge.sh`(see gulpfile.js).
 1. To publish a new version run `npm run deploy`.
 
-If you would like to deploy to the same domain, run `surge --add katarina.uzakova@protonmail.com`.
+If you would like to deploy to the same domain, write to katarina.uzakova@protonmail.com.
  
