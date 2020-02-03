@@ -28,7 +28,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp develop",
     "build": "gulp build",
-    "deploy": "gulp deploy"
+    "deploy": "gulp deploy",
+    "deploy:gh": "git checkout master && gulp build && git checkout gh-pages --force && rm *.{html,css,map,txt} && rm -rf img js svg icons && mv dist/* . && git add -A && git commit -m\"updated\" && git push && git checkout master"
   },
   "prettier": {
     "tabWidth": 4,
