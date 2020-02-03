@@ -157,13 +157,7 @@ gulp.task(
 gulp.task("default", gulp.series("develop"));
 
 
-/**
- * Push build to gh-pages
- */
-gulp.task('deployGh', function () {
-  return gulp.src("./dist/**/*")
-    .pipe(deployGh())
-});
+// Deploy to github
 
 gulp.task (
     "deployGh",
