@@ -11,6 +11,7 @@ var csso = require("gulp-csso");
 var twig = require("gulp-twig");
 var fs = require("fs");
 var surge = require("gulp-surge");
+var deployGh = require('gulp-gh-pages');
 
 // … now we can define tasks
 
@@ -154,3 +155,20 @@ gulp.task(
 
 // Set develop as a default task (Gulp runs this when you don't specify a task)
 gulp.task("default", gulp.series("develop"));
+
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deployGh', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deployGh())
+});
+
+gulp.task (
+    "deployGh",
+    gulp.series("build",
+    function githubDeploy() {
+    return gulp.src("./dist/**/*").pipe(deployGh())
+    })
+);
