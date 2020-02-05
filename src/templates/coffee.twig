@@ -25,7 +25,8 @@
                         <img src="{{coffee.images[0].url}}"
                         srcset="
                         {% for image in coffee.images %}
-                            {{ image.url }} {{ image.width }}w,
+                            {{ image.url }} {{ image.width }}w
+                            {% if not loop.last %},{% endif %}
                         {% endfor %}
                         "
                         sizes="
