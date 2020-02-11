@@ -1,0 +1,32 @@
+{% extends '_base.twig' %}
+
+{% block page_description %}Bad coffee no more: a handy calculator to help you brew a tasty cup of coffee{% endblock %}
+
+{% block title %}A calculator to help you brew a tasty cup of coffee{% endblock %}
+
+{% block link_calculator %}active{% endblock %}
+
+{% block content %}
+<div class="mb-5">
+    <form>
+        <section>
+            <label for="water" class="mr-4">Amount of water in grams</label>
+            <input type="number" step="1" name="water" id="water" class="border">
+        </section>
+    </form>
+    <p class="mt-2">To brew a proper cup of coffee with the amount of water you specified you will need <span id="coffee"></span> grams of coffee.</p>
+</div>
+{% endblock %}
+
+{% block script %}
+    <script>
+    var amountOfWater = document.getElementById("water").value;
+    function amountOfCoffee() {
+        let coffeeToUse = amountOfWater / 16;
+        return coffeeToUse;
+    };
+    var inputField = document.getElementById("water");
+    inputField.addEventListener('input', amountOfCoffee, false);
+    document.getElementById('coffee').innerHTML = amountOfCoffee();
+    </script>
+{% endblock %}
