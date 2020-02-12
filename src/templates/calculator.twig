@@ -7,26 +7,59 @@
 {% block link_calculator %}active{% endblock %}
 
 {% block content %}
-<div class="mb-5">
-    <form>
-        <section>
-            <label for="water" class="mr-4">Amount of water in grams</label>
-            <input type="number" step="1" name="water" id="water" class="border">
-        </section>
-    </form>
-    <p class="mt-2">To brew a proper cup of coffee with the amount of water you specified you will need <span id="coffee"></span> grams of coffee.</p>
-</div>
+    <div class="mb-5">
+        <label for="strength">Brew Strength (standard ratio is 1 unit of coffee to 16 units of water)</label>
+        <span>1:10</span>
+        <input id="strength" name="strength" type="range" min="10" max="20" step="1" value="16">
+        <span>1:20</span>
+        <p><span>Your ratio 1:</span>
+        <span id="chosenRatio"></span>
+        <form>
+            <section>
+                <label for="water" class="mr-1">Amount of water in grams</label>
+                <input type="number" step="10" name="water" id="water" class="border" value="250">
+                <p>will yield <span id="yield" class="font-weight-bold"></span> <span class="font-weight-bold">grams</span> of coffee liquid.</p></p>
+            </section>
+        </form>
+        </p>
+
+        <p class="mt-2">To brew coffee of the strength and in the quantity you specified you will need <span id="coffee" class="font-weight-bold"></span> <span class="font-weight-bold">grams</span> of coffee.</p>
+
+    </div>
 {% endblock %}
 
 {% block script %}
     <script>
-    var amountOfWater = document.getElementById("water").value;
-    function amountOfCoffee() {
-        let coffeeToUse = amountOfWater / 16;
-        return coffeeToUse;
-    };
-    var inputField = document.getElementById("water");
-    inputField.addEventListener('input', amountOfCoffee, false);
-    document.getElementById('coffee').innerHTML = amountOfCoffee();
+        var inputField = document.getElementById("water");
+        var amountOfWater = inputField.value;
+        var slider = document.getElementById("strength");
+        var output = document.getElementById("chosenRatio");
+        var result = document.getElementById("coffee");
+        var coffeeYield = document.getElementById("yield");
+        output.innerHTML = slider.value;
+
+       slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+
+        function displayValue() {
+            function amountOfCoffee() {
+               return Math.round(inputField.value/ (output.innerHTML));
+           };
+            result.innerHTML = amountOfCoffee();
+        };
+
+        displayValue();
+        inputField.addEventListener('input', displayValue);
+
+        function finalCup() {
+         function yield(){
+             return (inputField.value)*0.9;
+            };
+         coffeeYield.innerHTML = yield();
+        }
+
+        finalCup();
+        inputField.addEventListener('input', finalCup);
     </script>
 {% endblock %}
