@@ -11,20 +11,23 @@
         <form>
             <section class="mb-4">
                 <p class="h4">Strength</p>
-                    <label for="ratio">How strong would you like your coffee? </label>
-                    <div class="d-block">
-                        <span class="pr-1">strong</span>
-                        <input style="width: 60%" id="ratio" name="strength" type="range" min="10" max="20" step="1" value="16">
-                        <span class="pl-1">weak</span>
-                    </div>
-                <div>Your selected ratio is <index> <span class="font-weight-bold">1: </span><span id="chosenRatio" class="font-weight-bold"></span>
+                <label for="ratio">How strong would you like your coffee? </label>
+                <div class="d-block">
+                    <span class="pr-1">strong</span>
+                    <input style="width: 60%" id="ratio" name="strength" type="range" min="10" max="20" step="1" value="16">
+                    <span class="pl-1">weak</span>
+                </div>
+                <div>Your selected ratio is <span class="font-weight-bold">1: </span><span id="chosenRatio" class="font-weight-bold"></span>
                     (the standard ratio is 1 unit of coffee to 16 units of water).
                  </div>
             </section>
             <section class="mb-4">
                 <p class="h4">Amount of water</p>
                 <label for="water" class="mr-1">How much water are you using (in grams)?</label>
-                <input type="number" step="10" name="water" id="water" class="border" style="width: 60px;" value="250">
+                <div class="d-block">
+                    <input style="width: 80%" id="sliderValue" name="water" type="range" min="50" max="1000" step="10" onchange="numberValue.value = sliderValue.value">
+                </div>
+                <input type="number" id="numberValue" step="10" name="water" class="border" style="width: 60px;" value="250">
                 <p>This will yield approximately <span id="displayYield" class="font-weight-bold"></span> <span class="font-weight-bold">grams</span> of brewed coffee.</p>
             </section>
         </form>
@@ -37,11 +40,13 @@
 
 {% block script %}
     <script>
-        var inputField = document.getElementById("water");
+        var inputField = document.getElementById("numberValue");
         var slider = document.getElementById("ratio");
         var chosenRatio = document.getElementById("chosenRatio");
         var displayWeight = document.getElementById("displayWeight");
         var displayYield = document.getElementById("displayYield");
+
+
 
         function calculateWeight(water,ratio) {
             return Math.round(water /ratio);
