@@ -25,7 +25,7 @@
                 <p class="h4">Amount of water</p>
                 <label for="water" class="mr-1">How much water are you using (in grams)?</label>
                 <div class="d-block">
-                    <input style="width: 80%" id="sliderValue" name="water" type="range" min="50" max="1000" step="10" onchange="numberValue.value = sliderValue.value">
+                    <input style="width: 80%" id="sliderValue" name="water" type="range" min="50" max="1000" step="10" oninput="numberValue.value = sliderValue.value">
                 </div>
                 <input type="number" id="numberValue" step="10" name="water" class="border" style="width: 60px;" value="250">
                 <p>This will yield approximately <span id="displayYield" class="font-weight-bold"></span> <span class="font-weight-bold">grams</span> of brewed coffee.</p>
@@ -40,7 +40,6 @@
 
 {% block script %}
     <script>
-        var inputField = document.getElementById("numberValue");
         var slider = document.getElementById("ratio");
         var chosenRatio = document.getElementById("chosenRatio");
         var displayWeight = document.getElementById("displayWeight");
@@ -52,14 +51,14 @@
             return Math.round(water /ratio);
            }
 
-        function calculateWater(water) {
+/*         function calculateWater(water) {
             return Math.round(water*0.9)
-        }
+        } */
 
         function displayAll() {
             chosenRatio.innerHTML = slider.value;
-            displayWeight.innerHTML = calculateWeight(inputField.value, slider.value);
-            displayYield.innerHTML = calculateWater(inputField.value);
+            displayWeight.innerHTML = calculateWeight(document.getElementById("numberValue").value, slider.value);
+            displayYield.innerHTML = document.getElementById("numberValue").value*0.9;
         }
 
         displayAll();
