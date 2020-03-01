@@ -27,10 +27,10 @@
                 <label for="water" class="mr-1">How much water are you using (in grams)?</label>
                 <div class="form-row align-items-center mb-2">
                     <div class="col-md-10">
-                        <input class="form-control"id="sliderValue" name="water" type="range" min="50" max="1000" step="10" oninput="numberValue.value = sliderValue.value">
+                        <input class="form-control"id="sliderValue" name="water" type="range" min="50" max="1000" step="10" value="250" oninput="numberValue.value = sliderValue.value">
                     </div>
                     <div class="col-md-2">
-                        <input class="form-control" type="number" id="numberValue" step="10" name="water" value="250">
+                        <input class="form-control" id="numberValue" name="water" type="number" step="10" value="250">
                     </div>
                 </div>
                 <p>This will yield approximately <span id="displayYield" class="font-weight-bold"></span> <span class="font-weight-bold">grams</span> of brewed coffee.</p>
@@ -64,6 +64,8 @@
             chosenRatio.innerHTML = slider.value;
             displayWeight.innerHTML = calculateWeight(document.getElementById("numberValue").value, slider.value);
             displayYield.innerHTML = document.getElementById("numberValue").value*0.9;
+            document.getElementById("sliderValue").value = document.getElementById("numberValue").value;
+            document.getElementById("numberValue").value = document.getElementById("sliderValue").value;
         }
 
         displayAll();
