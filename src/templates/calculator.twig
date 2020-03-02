@@ -27,7 +27,7 @@
                 <label for="water" class="mr-1">How much water are you using (in grams)?</label>
                 <div class="form-row align-items-center mb-2">
                     <div class="col-md-10">
-                        <input class="form-control"id="sliderValue" name="water" type="range" min="50" max="1000" step="10" value="250" oninput="numberValue.value = sliderValue.value">
+                        <input class="form-control" id="sliderValue" name="water" type="range" min="50" max="1000" step="10" value="250">
                     </div>
                     <div class="col-md-2">
                         <input class="form-control" id="numberValue" name="water" type="number" step="10" value="250">
@@ -45,31 +45,40 @@
 
 {% block script %}
     <script>
-        var slider = document.getElementById("ratio");
+        var ratio = document.getElementById("ratio");
         var chosenRatio = document.getElementById("chosenRatio");
         var displayWeight = document.getElementById("displayWeight");
         var displayYield = document.getElementById("displayYield");
-
-
+        var waterAmountInput = document.getElementById("numberValue");
+        var waterAmountSlider = document.getElementById("sliderValue");
 
         function calculateWeight(water,ratio) {
-            return Math.round(water /ratio);
+            return Math.round(water /ratio)
            }
 
-/*         function calculateWater(water) {
+         function calculateWater(water) {
             return Math.round(water*0.9)
-        } */
+        }
 
         function displayAll() {
-            chosenRatio.innerHTML = slider.value;
-            displayWeight.innerHTML = calculateWeight(document.getElementById("numberValue").value, slider.value);
-            displayYield.innerHTML = document.getElementById("numberValue").value*0.9;
-            document.getElementById("sliderValue").value = document.getElementById("numberValue").value;
-            document.getElementById("numberValue").value = document.getElementById("sliderValue").value;
+            var waterAmount = parseInt(waterAmountInput.value);
+            chosenRatio.innerHTML = ratio.value;
+            displayWeight.innerHTML = calculateWeight(waterAmount, ratio.value);
+            displayYield.innerHTML = calculateWater (waterAmount);
+            if (event) {
+                if (event.target === waterAmountSlider) {
+                    waterAmountInput.value = waterAmountSlider.value;
+                } else if (event.target === waterAmountInput) {
+                    waterAmountSlider.value = waterAmountInput.value;
+                }
+            }
         }
 
         displayAll();
 
-        document.querySelector('form').addEventListener("input",displayAll);
+        document.querySelector('form').addEventListener("input", function(event) {
+        displayAll(event);
+        });
+
     </script>
 {% endblock %}
