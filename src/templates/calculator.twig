@@ -52,31 +52,33 @@
         var waterAmountInput = document.getElementById("numberValue");
         var waterAmountSlider = document.getElementById("sliderValue");
 
-        function calculateWeight(water,ratio) {
-            return Math.round(water/ratio)
-           }
+        function calculateWeight(water, ratio) {
+        return Math.round(water / ratio);
+        }
 
-         function calculateWater(water) {
-            return Math.round(water*0.9)
+        function calculateWater(water) {
+        return Math.round(water * 0.9);
         }
 
         function displayAll(e) {
-            var waterAmount = parseInt(waterAmountInput.value);
-            chosenRatio.innerHTML = ratio.value;
-            displayWeight.innerHTML = calculateWeight(waterAmount, ratio.value);
-            displayYield.innerHTML = calculateWater (waterAmount);
-            if (e) {
-                if (e.target === waterAmountSlider) {
-                    waterAmountInput.value = waterAmountSlider.value;
-                } else if (e.target === waterAmountInput) {
-                    waterAmountSlider.value = waterAmountInput.value;
-                }
+        var waterAmount = parseInt(waterAmountInput.value);
+        console.log(waterAmount);
+        chosenRatio.innerHTML = ratio.value;
+        console.log("in", waterAmount.value);
+        displayWeight.innerHTML = calculateWeight(waterAmount, ratio.value);
+        displayYield.innerHTML = calculateWater(waterAmount);
+        if (e) {
+            if (e.target === waterAmountSlider) {
+            waterAmountInput.value = waterAmountSlider.value;
+            } else if (e.target === waterAmountInput) {
+            waterAmountSlider.value = waterAmountInput.value;
             }
+        }
+        console.log("out", waterAmount.value);
         }
 
         displayAll();
 
         document.querySelector("form").addEventListener("input", displayAll);
-
     </script>
 {% endblock %}
