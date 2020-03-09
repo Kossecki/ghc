@@ -35,11 +35,22 @@
                 </div>
                 <p>This will yield approximately <span id="displayYield" class="font-weight-bold"></span> <span class="font-weight-bold">grams</span> of brewed coffee.</p>
             </section>
+            <section class="mb-4">
+                <h2 class="h4">Quantity of ground coffee</h2>
+                <label for="coffee" class="mr-1">How much ground coffee are you using (in grams)?</label>
+                <div class="form-row align-items-center mb-2">
+                    <div class="col-md-10">
+                        <input class="form-control" id="sliderValueCoffee" name="coffee" type="range" min="1" max="100" step="1" value="5">
+                    </div>
+                    <div class="col-md-2">
+                        <input class="form-control" id="numberValueCoffee" name="coffee" type="number" min="1" max="100" step="1" value="5">
+                    </div>
+                </div>
+            </section>
+            <p>You will need <span id="displayWeight" class="font-weight-bold"></span> <span class="font-weight-bold">grams</span>
+                of ground coffee to brew coffee of the strength and in the quantity you specified.
+            </p>
         </form>
-        <h2 class="h4">Quantity of ground coffee</h2>
-        <p class="mt-2">You will need <span id="displayWeight" class="font-weight-bold"></span> <span class="font-weight-bold">grams</span>
-            of ground coffee to brew coffee of the strength and in the quantity you specified.
-        </p>
     </div>
 {% endblock %}
 
