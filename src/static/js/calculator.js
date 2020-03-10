@@ -8,6 +8,7 @@ function calculator() {
     var coffeeAmountInput = document.getElementById("numberValueCoffee");
     var coffeeAmountSlider = document.getElementById("sliderValueCoffee");
 
+
     function calculateWeight(water, ratio) {
         return Math.round(water / ratio);
     }
@@ -20,6 +21,8 @@ function calculator() {
         return coffee * ratio;
     }
 
+    coffeeAmountInput.value = calculateWeight(waterAmountInput.value, ratio.value);
+    coffeeAmountSlider.value = coffeeAmountInput.value;
     function displayAll(e) {
         chosenRatio.innerHTML = ratio.value;
         if (e) {
@@ -45,7 +48,7 @@ function calculator() {
                 waterAmountInput.value = waterAmountSlider.value;
             }
         }
-var waterAmount = parseInt(waterAmountInput.value);
+        var waterAmount = parseInt(waterAmountInput.value);
         displayWeight.innerHTML = calculateWeight(waterAmount, ratio.value);
         displayYield.innerHTML = calculateWater(waterAmount);
     }
