@@ -23,10 +23,14 @@ function calculator() {
 
     coffeeAmountInput.value = calculateWeight(waterAmountInput.value, ratio.value);
     coffeeAmountSlider.value = coffeeAmountInput.value;
+
     function displayAll(e) {
         chosenRatio.innerHTML = ratio.value;
-        if (e) {
-            if (e.target === waterAmountSlider) {
+         if (e) {
+            if (e.target === ratio) {
+                coffeeAmountInput.value = calculateWeight(waterAmountInput.value, ratio.value);
+                coffeeAmountSlider.value = coffeeAmountInput.value;
+            } else if (e.target === waterAmountSlider) {
                 waterAmountInput.value = waterAmountSlider.value;
                 var waterAmount = parseInt(waterAmountInput.value);
                 coffeeAmountInput.value = calculateWeight(waterAmount, ratio.value);
@@ -48,6 +52,39 @@ function calculator() {
                 waterAmountInput.value = waterAmountSlider.value;
             }
         }
+/*      if (e) {
+            var a = waterAmountInput.value;
+            var aa = waterAmountSlider.value;
+            var b = coffeeAmountInput.value;
+            var bb = coffeeAmountSlider.value;
+            var waterAmount;
+            var coffeeAmount;
+            if (e.target === ratio) {
+                b = calculateWeight(a, ratio.value);
+                console.log(b);
+                bb = b;
+            } else if (e.target === waterAmountSlider) {
+                a = aa;
+                waterAmount = parseInt(a);
+                b = calculateWeight(waterAmount, ratio.value);
+                bb = b;
+            } else if (e.target === waterAmountInput) {
+                aa = a;
+                waterAmount = parseInt(a);
+                b = calculateWeight(waterAmount, ratio.value);
+                bb = b
+            } else if (e.target === coffeeAmountSlider) {
+                b = bb;
+                coffeeAmount = parseInt(bb);
+                a = calculateInitialWater(coffeeAmount, ratio.value);
+                aa = a;
+            } else if (e.target === coffeeAmountInput) {
+                bb = b;
+                coffeeAmount = parseInt(b);
+                aa = calculateInitialWater(coffeeAmount, ratio.value);
+                a = aa;
+            }
+        }*/
         var waterAmount = parseInt(waterAmountInput.value);
         displayWeight.innerHTML = calculateWeight(waterAmount, ratio.value);
         displayYield.innerHTML = calculateWater(waterAmount);
