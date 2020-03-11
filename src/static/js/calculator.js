@@ -86,7 +86,6 @@ function calculator() {
                 a = aa;
             }
         }*/
-        displayWeight.innerHTML = calculateWeight(waterAmount, ratio.value);
         displayYield.innerHTML = calculateWater(waterAmount);
     }
 
