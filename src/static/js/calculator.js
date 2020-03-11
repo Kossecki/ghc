@@ -23,9 +23,10 @@ function calculator() {
 
     function displayAll(e) {
         chosenRatio.innerHTML = ratio.value;
+        var waterAmount = parseInt(waterAmountInput.value);
          if (e) {
             if (e.target === ratio) {
-                coffeeAmountInput.value = calculateWeight(waterAmountInput.value, ratio.value);
+                coffeeAmountInput.value = calculateWeight(waterAmount, ratio.value);
                 coffeeAmountSlider.value = coffeeAmountInput.value;
             } else if (e.target === waterAmountSlider) {
                 waterAmountInput.value = waterAmountSlider.value;
@@ -49,7 +50,7 @@ function calculator() {
                 waterAmountInput.value = waterAmountSlider.value;
             }
             } else {
-                coffeeAmountInput.value = calculateWeight(waterAmountInput.value, ratio.value);
+                coffeeAmountInput.value = calculateWeight(waterAmount, ratio.value);
                 coffeeAmountSlider.value = coffeeAmountInput.value;
             }
 /*      if (e) {
@@ -85,7 +86,6 @@ function calculator() {
                 a = aa;
             }
         }*/
-        var waterAmount = parseInt(waterAmountInput.value);
         displayWeight.innerHTML = calculateWeight(waterAmount, ratio.value);
         displayYield.innerHTML = calculateWater(waterAmount);
     }
