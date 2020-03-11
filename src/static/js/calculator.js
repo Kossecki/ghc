@@ -21,9 +21,6 @@ function calculator() {
         return coffee * ratio;
     }
 
-    coffeeAmountInput.value = calculateWeight(waterAmountInput.value, ratio.value);
-    coffeeAmountSlider.value = coffeeAmountInput.value;
-
     function displayAll(e) {
         chosenRatio.innerHTML = ratio.value;
          if (e) {
@@ -51,7 +48,10 @@ function calculator() {
                 waterAmountSlider.value = calculateInitialWater(coffeeAmount, ratio.value);
                 waterAmountInput.value = waterAmountSlider.value;
             }
-        }
+            } else {
+                coffeeAmountInput.value = calculateWeight(waterAmountInput.value, ratio.value);
+                coffeeAmountSlider.value = coffeeAmountInput.value;
+            }
 /*      if (e) {
             var a = waterAmountInput.value;
             var aa = waterAmountSlider.value;
