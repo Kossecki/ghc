@@ -7,7 +7,6 @@ function calculator() {
     var coffeeAmountInput = document.getElementById("numberValueCoffee");
     var coffeeAmountSlider = document.getElementById("sliderValueCoffee");
 
-
     function calculateWeight(water, ratio) {
         return Math.round(water / ratio);
     }
@@ -21,48 +20,44 @@ function calculator() {
     }
 
     function displayAll(e) {
-        chosenRatio.innerHTML = ratio.value;
-        var waterAmount = parseInt(waterAmountInput.value);
+        var data = {
+            ratio: 16,
+            waterAmount: 250,
+            coffeeAmount: 16,
+            lastChangedCoffee: false
+        }
+
          if (e) {
             if (e.target === ratio) {
-                coffeeAmountInput.value = calculateWeight(waterAmount, ratio.value);
-                coffeeAmountSlider.value = coffeeAmountInput.value;
-            } else if (e.target === waterAmountSlider) {
-                waterAmountInput.value = waterAmountSlider.value;
-                var waterAmount = parseInt(waterAmountInput.value);
-                coffeeAmountInput.value = calculateWeight(waterAmount, ratio.value);
-                coffeeAmountSlider.value = coffeeAmountInput.value;
-            } else if (e.target === waterAmountInput) {
-                waterAmountSlider.value = waterAmountInput.value;
-                var waterAmount = parseInt(waterAmountSlider.value);
-                coffeeAmountInput.value = calculateWeight(waterAmount, ratio.value);
-                coffeeAmountSlider.value = coffeeAmountInput.value;
-            } else if (e.target === coffeeAmountSlider) {
-                coffeeAmountInput.value = coffeeAmountSlider.value;
-                var coffeeAmount = parseInt(coffeeAmountSlider.value);
-                waterAmountInput.value = calculateInitialWater(coffeeAmount, ratio.value);
-                waterAmountSlider.value = waterAmountInput.value;
-            } else if (e.target === coffeeAmountInput) {
-                coffeeAmountSlider.value = coffeeAmountInput.value;
-                var coffeeAmount = parseInt(coffeeAmountInput.value);
-                waterAmountSlider.value = calculateInitialWater(coffeeAmount, ratio.value);
-                waterAmountInput.value = waterAmountSlider.value;
+                data.ratio = number;
+            } else if (e.target === waterAmountSlider || e.target === waterAmountInput ) {
+                data.waterAmount = number;
+            } else if (e.target === coffeeAmountSlider || e.target === coffeeAmountInput) {
+                data.coffeeAmount = number;
+                data.lastChangedCoffee = true;
             }
+            if (data.lastChangedCoffee) {
+               data.waterAmount = calculateInitialWater(data.coffeeAmount, data.ratio);
             } else {
-                coffeeAmountInput.value = calculateWeight(waterAmount, ratio.value);
-                coffeeAmountSlider.value = coffeeAmountInput.value;
+                data.coffeeAmount = calculateWeight(data.waterAmount, data.ratio);
             }
-
+         }
+        chosenRatio.innerHTML = data.ratio;
+        waterAmountSlider.value = data.waterAmount;
+        waterAmountInput.value = data.waterAmount;
+        coffeeAmountSlider.value = data.coffeeAmount;
+        coffeeAmountInput.value = data.coffeeAmount;
         displayYield.innerHTML = calculateWater(waterAmount);
     }
 
     displayAll();
 
     document.querySelector("form").addEventListener("input", displayAll);
-}
 
-if (document.readyState != "loading") {
-    calculator();
-} else {
-    document.addEventListener("DOMContentLoaded", calculator);
+
+    if (document.readyState != "loading") {
+        calculator();
+    } else {
+        document.addEventListener("DOMContentLoaded", calculator);
+    }
 }
