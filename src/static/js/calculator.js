@@ -27,13 +27,9 @@ function calculator() {
     };
 
     function displayAll(e) {
-
-
- console.log("start", data);
          if (e) {
-             var changedValue = parseInt(e.target.value);
-
-             data.lastChangedCoffee = false;
+            var changedValue = parseInt(e.target.value);
+            data.lastChangedCoffee = false;
 
             if (e.target === ratio) {
                 data.ratio = changedValue;
@@ -51,7 +47,6 @@ function calculator() {
              data.coffeeAmount = calculateWeight(data.waterAmount, data.ratio);
          }
 
-         console.log("end", data);
         chosenRatio.innerHTML = data.ratio;
         waterAmountSlider.value = data.waterAmount;
         waterAmountInput.value = data.waterAmount;
