@@ -1,0 +1,56 @@
+{% extends '_base.twig' %}
+
+{% block page_description %}Bad coffee no more: a handy calculator to help you brew a tasty cup of coffee{% endblock %}
+
+{% block title %}Filter Coffee Calculator{% endblock %}
+
+{% block link_calculator %}active{% endblock %}
+
+{% block content %}
+    <div class="mb-5">
+        <form>
+            <h1 class="mb-3">Filter Coffee Calculator</h1>
+            <section class="mb-4">
+                <h2 class="h4">Strength</h2>
+                <label for="ratio">How strong would you like your coffee? </label>
+                <div class="form-row align-items-baseline">
+                    <p class="col-auto">strong</p>
+                    <div class="col-6 col-md-8 col-lg-10"><input class="form-control" id="ratio" name="strength" type="range" min="10" max="20" step="1" value=""></div>
+                    <p class="col-auto">weak</p>
+                </div>
+                <p>Your selected ratio is <span class="font-weight-bold">1: </span><span id="chosenRatio" class="font-weight-bold"></span>
+                    (the standard ratio being 1 unit of coffee to 16 units of water).
+                 </p>
+            </section>
+            <section class="mb-4">
+                <h2 class="h4">Amount of water</h2>
+                <label for="water" class="mr-1">How much water are you using (in grams)?</label>
+                <div class="form-row align-items-center mb-2">
+                    <div class="col-md-10">
+                        <input class="form-control" id="sliderValue" name="water" type="range" min="50" max="1000" step="10" value="">
+                    </div>
+                    <div class="col-md-2">
+                        <input class="form-control" id="numberValue" name="water" type="number" min="50" max="1000" step="10" value="">
+                    </div>
+                </div>
+                <p>This will yield approximately <span id="displayYield" class="font-weight-bold"></span> <span class="font-weight-bold">grams</span> of brewed coffee.</p>
+            </section>
+            <section class="mb-4">
+                <h2 class="h4">Quantity of ground coffee</h2>
+                <label for="coffee" class="mr-1">How much ground coffee are you using (in grams)?</label>
+                <div class="form-row align-items-center mb-2">
+                    <div class="col-md-10">
+                        <input class="form-control" id="sliderValueCoffee" name="coffee" type="range" min="1" max="100" step="1" value="">
+                    </div>
+                    <div class="col-md-2">
+                        <input class="form-control" id="numberValueCoffee" name="coffee" type="number" min="1" max="100" step="1" value="">
+                    </div>
+                </div>
+            </section>
+        </form>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="/js/calculator.js" defer async></script>
+{% endblock %}
